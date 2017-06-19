@@ -1,0 +1,11 @@
+<ivy-module version="2.0">
+    <info organisation="com.company" module="cwproject"/>
+    <dependencies>
+		<dependency org="javax.xml.bind" name="jaxb-api" rev="2.2.12"/>
+		<dependency org="org.eclipse.jetty" name="jetty-servlet" rev="9.4.6.v20170531"/>
+		<dependency org="org.eclipse.jetty" name="jetty-webapp" rev="9.4.6.v20170531"/>
+		<dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.8.9"/>
+		<dependency org="org.apache.logging.log4j" name="log4j-core" rev="2.8.2"/>
+		<dependency org="org.json" name="json" rev="20170516"/>
+    </dependencies>
+</ivy-module>
