@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Jetty-Spring :: Test</title>
+		<title>XML to JSON converter</title>
 	</head>
 	<body>
-		<div>Welcome!<br/>Project context path: ${path}</div>
+		<label for="xml">Enter XML</label>
+		<textarea id="xml" name="xml"></textarea>
+		<button id="submit" onclick="submit()">Submit</button>
 	</body>
+	<script
+			src="http://code.jquery.com/jquery-3.2.1.min.js"
+			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			crossorigin="anonymous"></script>
+	<script type="text/javascript">
+        function submit() {
+            var msgContent = document.getElementById("xml").value;
+            $.ajax({
+                type: "POST",
+                timeout: 50000,
+                url: "send",
+                data: {
+                    xmltext: msgContent
+                },
+                success: function (data) {
+                    alert(data);
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        }
+	</script>
 </html>

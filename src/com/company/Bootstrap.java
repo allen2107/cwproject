@@ -36,6 +36,7 @@ public class Bootstrap {
 
             server.setHandler(context);
 
+
             server.start();
             server.dumpStdErr();
             server.join();
