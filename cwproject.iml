@@ -8,6 +8,16 @@
         </propertiesSettings>
       </configuration>
     </facet>
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -35,7 +45,6 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/org.osgi/org.osgi.core/jars/org.osgi.core-4.3.1.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.lmax/disruptor/jars/disruptor-3.3.6.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.conversantmedia/disruptor/jars/disruptor-1.2.10-jdk7.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.24.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.jctools/jctools-core/jars/jctools-core-1.2.1.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.8.7.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.8.0.jar!/" />
@@ -58,6 +67,9 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.commons/commons-csv/jars/commons-csv-1.4.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.beust/jcommander/jars/jcommander-1.48.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.json/json/bundles/json-20170516.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.slf4j/slf4j-log4j12/jars/slf4j-log4j12-1.7.25.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.25.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/log4j/log4j/bundles/log4j-1.2.17.jar!/" />
         </CLASSES>
         <JAVADOC>
           <root url="jar://$USER_HOME$/.ivy2/cache/javax.xml.bind/jaxb-api/javadocs/jaxb-api-2.2.12-javadoc.jar!/" />
@@ -76,7 +88,6 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/org.osgi/org.osgi.core/javadocs/org.osgi.core-4.3.1-javadoc.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.lmax/disruptor/javadocs/disruptor-3.3.6-javadoc.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.conversantmedia/disruptor/javadocs/disruptor-1.2.10-javadoc.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.slf4j/slf4j-api/javadocs/slf4j-api-1.7.24-javadoc.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.jctools/jctools-core/javadocs/jctools-core-1.2.1-javadoc.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/javadocs/jackson-databind-2.8.7-javadoc.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/javadocs/jackson-annotations-2.8.0-javadoc.jar!/" />
@@ -97,6 +108,9 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.commons/commons-csv/javadocs/commons-csv-1.4-javadoc.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.beust/jcommander/javadocs/jcommander-1.48-javadoc.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.json/json/javadocs/json-20170516-javadoc.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.slf4j/slf4j-log4j12/javadocs/slf4j-log4j12-1.7.25-javadoc.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.slf4j/slf4j-api/javadocs/slf4j-api-1.7.25-javadoc.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/log4j/log4j/javadocs/log4j-1.2.17-javadoc.jar!/" />
         </JAVADOC>
         <SOURCES>
           <root url="jar://$USER_HOME$/.ivy2/cache/javax.xml.bind/jaxb-api/sources/jaxb-api-2.2.12-sources.jar!/" />
@@ -115,7 +129,6 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/org.osgi/org.osgi.core/sources/org.osgi.core-4.3.1-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.lmax/disruptor/sources/disruptor-3.3.6-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.conversantmedia/disruptor/sources/disruptor-1.2.10-sources.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.slf4j/slf4j-api/sources/slf4j-api-1.7.24-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.jctools/jctools-core/sources/jctools-core-1.2.1-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/sources/jackson-databind-2.8.7-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/sources/jackson-annotations-2.8.0-sources.jar!/" />
@@ -138,6 +151,9 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.commons/commons-csv/sources/commons-csv-1.4-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.beust/jcommander/sources/jcommander-1.48-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.json/json/sources/json-20170516-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.slf4j/slf4j-log4j12/sources/slf4j-log4j12-1.7.25-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.slf4j/slf4j-api/sources/slf4j-api-1.7.25-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/log4j/log4j/sources/log4j-1.2.17-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>

@@ -7,5 +7,7 @@
 		<dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.8.9"/>
 		<dependency org="org.apache.logging.log4j" name="log4j-core" rev="2.8.2"/>
 		<dependency org="org.json" name="json" rev="20170516"/>
+		<dependency org="org.slf4j" name="slf4j-log4j12" rev="1.7.25"/>
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.25"/>
     </dependencies>
 </ivy-module>
