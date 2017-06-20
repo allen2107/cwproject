@@ -1,5 +1,7 @@
 package com.company.http;
 
+import com.company.jaxb.xmlparser.XmlParser;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +13,6 @@ public class XmlParserServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         xml = req.getParameter("xmltext");
-        System.out.println("xml:  " + xml);
+        XmlParser.parsexml(xml);
     }
 }
