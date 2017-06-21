@@ -1,12 +1,15 @@
 package com.company;
 
 
+import com.company.jaxb.xmlparser.XmlParser;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.util.Properties;
 
 public class Bootstrap {
@@ -36,11 +39,9 @@ public class Bootstrap {
 
             server.setHandler(context);
 
-
             server.start();
             server.dumpStdErr();
             server.join();
-
         } catch (Exception e) {
             e.printStackTrace();
         }

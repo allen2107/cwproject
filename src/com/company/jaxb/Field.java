@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name="field", namespace = "wsapi:Utils")
+@XmlRootElement
 public class Field {
     @XmlAttribute
     private String id;

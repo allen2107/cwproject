@@ -7,19 +7,26 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="Envelope")
 public class Envelope {
-    @XmlElementWrapper(name="body")
-    ArrayList<Payment> body;
+
+    @XmlElementWrapper(name="Body")
+    @XmlElement(name="sendPayment", namespace = "wsapi:Payment")
+    private ArrayList<Payment> Body;
 
     public void setBody(ArrayList<Payment> body){
-        this.body=body;
+        this.Body=body;
     }
-
     public List<Payment> getBody(){
-        return body;
+        return Body;
     }
 
     public Envelope(){
-        this.body = new ArrayList<>();
+        this.Body = new ArrayList<>();
     }
 
+    public Envelope(ArrayList<Payment> body){
+        this.Body = body;
+    }
+    public void add(Payment payment){
+        Body.add(payment);
+    }
 }

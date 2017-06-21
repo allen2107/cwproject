@@ -3,7 +3,7 @@ package com.company.jaxb;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name="sendPayment", namespace = "wsapi:Utils")
+@XmlRootElement(name="account", namespace = "wsapi:Utils")
 public class Account {
     @XmlAttribute
     String type;

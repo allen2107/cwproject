@@ -1,31 +1,34 @@
 package com.company.jaxb;
 
-import com.sun.xml.internal.txw2.annotation.XmlElement;
+import javax.xml.bind.annotation.*;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name="SendPayment", namespace = "wsapi:Payment")
+@XmlRootElement(name="sendPayment", namespace = "wsapi:Payment")
 public class Payment{
-
+    @XmlElement
     private String token;
+    @XmlElement
     private String cardNumber;
+    @XmlElement
     private String requestID;
+    @XmlElement
     private String amount;
+    @XmlElement
     private String currency;
-    private ArrayList<Account> accounts;
+    @XmlElement(namespace = "wsapi:Utils")
+    private ArrayList<Account> account;
+    @XmlElement
     private String page;
-    private ArrayList<Field> fields;
+    @XmlElement
+    private ArrayList<Field> field;
 
     public Payment(){
-        accounts=new ArrayList<>();
-        fields = new ArrayList<>();
+        account=new ArrayList<>();
+        field = new ArrayList<>();
     }
 
-    @XmlElement
     public String getToken() {
         return token;
     }
@@ -34,7 +37,6 @@ public class Payment{
         this.token = token;
     }
 
-    @XmlElement
     public String getCardNumber() {
         return cardNumber;
     }
@@ -43,7 +45,6 @@ public class Payment{
         this.cardNumber = cardNumber;
     }
 
-    @XmlElement
     public String getRequestID() {
         return requestID;
     }
@@ -52,7 +53,6 @@ public class Payment{
         this.requestID = requestID;
     }
 
-    @XmlElement
     public String getAmount() {
         return amount;
     }
@@ -61,7 +61,6 @@ public class Payment{
         this.amount = amount;
     }
 
-    @XmlElement
     public String getCurrency() {
         return currency;
     }
@@ -70,16 +69,14 @@ public class Payment{
         this.currency = currency;
     }
 
-    @XmlElement
     public ArrayList<Account> getAccounts() {
-        return accounts;
+        return account;
     }
 
     public void setAccounts(ArrayList<Account> accounts) {
-        this.accounts = accounts;
+        this.account = accounts;
     }
 
-    @XmlElement
     public String getPage() {
         return page;
     }
@@ -88,13 +85,12 @@ public class Payment{
         this.page = page;
     }
 
-    @XmlElement
     public ArrayList<Field> getFields() {
-        return fields;
+        return field;
     }
 
-    public void setFields(ArrayList<Field> fields) {
-        this.fields = fields;
+    public void setFields(ArrayList<Field> field) {
+        this.field = field;
     }
 
     public Payment(String token, String cardNumber, String requestID,
@@ -105,8 +101,13 @@ public class Payment{
         this.requestID=requestID;
         this.amount=amount;
         this.currency=currency;
-        this.accounts=accounts;
+        this.account=accounts;
         this.page=page;
-        this.fields=fields;
+        this.field=fields;
+    }
+//for test
+    @Override
+    public String toString() {
+        return token+";"+cardNumber+";"+requestID+";"+amount+";"+currency+";"+page+";"+account.size()+":"+field.size();
     }
 }

@@ -3,10 +3,12 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
           http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
     version="3.0">
+	<!-- servlet definition -->
 	<servlet>
         <servlet-name>XmlParserServlet</servlet-name>
         <servlet-class>com.company.http.XmlParserServlet</servlet-class>
 	</servlet>
+	<!-- servlet mappings -->
 	<servlet-mapping>
 		<servlet-name>XmlParserServlet</servlet-name>
 		<url-pattern>/send</url-pattern>

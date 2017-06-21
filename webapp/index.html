@@ -5,8 +5,9 @@
 	</head>
 	<body>
 		<label for="xml">Enter XML</label>
-		<textarea id="xml" name="xml" rows="10" cols="10"></textarea>
+		<textarea id="xml" name="xml" rows="50" cols="100"></textarea>
 		<button id="submit" onclick="submit()">Submit</button>
+		<div id="error_text"></div>
 	</body>
 	<script
 			src="http://code.jquery.com/jquery-3.2.1.min.js"
@@ -23,10 +24,12 @@
                     xmltext: msgContent
                 },
                 success: function (data) {
-                    alert(data);
+                    //alert(data);
                 },
                 error: function (data) {
-                    console.log(data);
+                    window.location = "errorpage.html";
+                    //$('#error_text').append(data.responseText);
+                    //$('#error_text').append(data);
                 }
             });
         }
