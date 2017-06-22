@@ -12,15 +12,4 @@ public class JsonConverter {
 
         return mapper.writeValueAsString(envelope);
     }
-
-    //error message in response
-    public static String usermessageToJson(Object o){
-        try {
-            ObjectMapper mapper = new ObjectMapper();
-
-            return mapper.writeValueAsString(o);
-        } catch (JsonProcessingException e) {
-            return "unexpected json error";
-        }
-    }
 }

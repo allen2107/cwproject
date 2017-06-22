@@ -8,10 +8,18 @@
         <servlet-name>XmlParserServlet</servlet-name>
         <servlet-class>com.company.http.XmlParserServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>errorHandler</servlet-name>
+		<servlet-class>com.company.http.ErrorHandler</servlet-class>
+	</servlet>
 	<!-- servlet mappings -->
 	<servlet-mapping>
 		<servlet-name>XmlParserServlet</servlet-name>
-		<url-pattern>/send</url-pattern>
+		<url-pattern>send</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>errorHandler</servlet-name>
+		<url-pattern>/ErrorHandler</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

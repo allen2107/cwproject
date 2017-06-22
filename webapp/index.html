@@ -7,7 +7,7 @@
 		<label for="xml">Enter XML</label>
 		<textarea id="xml" name="xml" rows="50" cols="100"></textarea>
 		<button id="submit" onclick="submit()">Submit</button>
-		<div id="error_text"></div>
+		<div id="answer"></div>
 	</body>
 	<script
 			src="http://code.jquery.com/jquery-3.2.1.min.js"
@@ -23,13 +23,12 @@
                 data: {
                     xmltext: msgContent
                 },
+				datatype: "text",
                 success: function (data) {
-                    //alert(data);
-                },
-                error: function (data) {
-                    window.location = "errorpage.html";
-                    //$('#error_text').append(data.responseText);
-                    //$('#error_text').append(data);
+                    if (data == "succes")
+						$('#answer').html(data);
+                    if (data == "error")
+                        window.location.href = "/ErrorHandler";
                 }
             });
         }
